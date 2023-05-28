@@ -69,3 +69,15 @@ opt-level = 3
 overflow-checks = false
 panic = 'unwind'
 rpath = false
+
+[patch.crates-io]
+arrow = { version = "40.0.0", features = ["prettyprint"], git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-flight = { version = "40.0.0", features = ["flight-sql-experimental"], git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-buffer = { version = "40.0.0", default-features = false, git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-schema = { version = "40.0.0", default-features = false, git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-array = { version = "40.0.0", default-features = false, features = ["chrono-tz"], git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-select = { version = "40.0.0", git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-data = { version = "40.0.0", git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-cast = { version = "40.0.0", git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+arrow-ipc = { version = "40.0.0", git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
+# parquet = { version = "40.0.0", git = "https://github.com/roeap/arrow-rs", rev = "1fc4cf08b42ee16f9772f5f54ea6372ed75800ac" }
