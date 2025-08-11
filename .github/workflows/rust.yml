@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check License Header
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: korandoru/hawkeye@v6
 
   # Check crate compiles and base cargo check passes
@@ -54,7 +54,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -77,7 +77,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -102,7 +102,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -134,7 +134,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -165,7 +165,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -223,7 +223,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -256,7 +256,7 @@ jobs:
     needs: linux-build-lib
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -288,7 +288,7 @@ jobs:
     needs: linux-build-lib
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -329,7 +329,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -354,7 +354,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -375,7 +375,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -387,7 +387,7 @@ jobs:
     name: build and run with wasm-pack
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup for wasm32
         run: |
           rustup target add wasm32-unknown-unknown
@@ -412,7 +412,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -459,7 +459,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -484,7 +484,7 @@ jobs:
   #    name: cargo test (win64)
   #    runs-on: windows-latest
   #    steps:
-  #      - uses: actions/checkout@v4
+  #      - uses: actions/checkout@v5
   #        with:
   #          submodules: true
   #      - name: Setup Rust toolchain
@@ -501,7 +501,7 @@ jobs:
   #    name: cargo test (macos)
   #    runs-on: macos-latest
   #    steps:
-  #      - uses: actions/checkout@v4
+  #      - uses: actions/checkout@v5
   #        with:
   #          submodules: true
   #          fetch-depth: 1
@@ -515,7 +515,7 @@ jobs:
     name: cargo test (macos-aarch64)
     runs-on: macos-14
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -532,7 +532,7 @@ jobs:
     container:
       image: amd64/rust:bullseye # Use the bullseye tag image which comes with python3.9
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -555,7 +555,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -572,7 +572,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
         with:
@@ -589,7 +589,7 @@ jobs:
   #   name: coverage
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v4
+  #     - uses: actions/checkout@v5
   #       with:
   #         submodules: true
   #     - name: Install protobuf compiler
@@ -631,7 +631,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -651,7 +651,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -672,7 +672,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           fetch-depth: 1
@@ -710,7 +710,7 @@ jobs:
     container:
       image: amd64/rust
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Rust toolchain
         uses: ./.github/actions/setup-builder
       - name: Install cargo-msrv
