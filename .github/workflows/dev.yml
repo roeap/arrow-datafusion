@@ -28,7 +28,7 @@ jobs:
     name: Check License Header
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
-      - uses: korandoru/hawkeye@cdc68d9c8ace500aefcd8f4dd39b915cd06305dd  # v6.1.1
+      - uses: korandoru/hawkeye@62ea202c0bea0074eda7b1dc9f1edbb9d40827f7  # v7.0.0
 
   prettier:
     name: Use prettier to check formatting of documents
